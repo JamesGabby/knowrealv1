@@ -1,9 +1,14 @@
+'use client'
+
 import Image from "next/image";
 import { Sansation } from 'next/font/google';
+import { signIn, signOut, useSession } from "next-auth/react"
 
 const sansationLogo = Sansation({ weight: '700', subsets: ['latin'] });
 
 export default function Home() {
+  const { data: session } = useSession()
+
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -45,6 +50,7 @@ export default function Home() {
           >
             Log in
           </a>
+          <button onClick={() => signIn("google")}>Sign in with Google</button>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
