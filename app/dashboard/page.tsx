@@ -1,21 +1,18 @@
 "use client"
 
 import { signOut, useSession } from "next-auth/react"
+import { redirect } from "next/navigation"
 
 export default function DashboardClient() {
   const { data: session } = useSession()
 
+  if (!session) {
+      redirect('/')
+  }
+
   return (
     <div>
-      <h1>Dashboard</h1>
-      <p>Welcome, {session?.user?.name}</p>
-
-      <button
-        onClick={() => signOut({ callbackUrl: "/" })}
-        className="rounded bg-red-500 px-4 py-2 text-white"
-      >
-        Sign out
-      </button>
+      <h1 className="text-black">Dashboard</h1>
     </div>
   )
 }

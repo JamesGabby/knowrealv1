@@ -1,11 +1,9 @@
 'use client'
 
 import Image from "next/image";
-import { Sansation } from 'next/font/google';
+import { sansationLogo } from "@/fonts/Sansation";
 import { signIn, signOut, useSession } from "next-auth/react"
 import { redirect } from "next/navigation";
-
-const sansationLogo = Sansation({ weight: '700', subsets: ['latin'] });
 
 export default function Home() {
   //const session = await getServerSession(authConfig)
