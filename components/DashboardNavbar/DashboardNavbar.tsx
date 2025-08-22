@@ -10,18 +10,19 @@ import { sansationLogo } from "@/fonts/Sansation"
 
 const navItems = [
   { href: "/dashboard", label: "Home", icon: Home },
-  { href: "/dashboard/analytics", label: "Analytics", icon: BarChart2 },
-  { href: "/dashboard/settings", label: "Settings", icon: Settings },
+  { href: "/dashboard/analytics", label: "Meditation", icon: BarChart2 },
+  { href: "/dashboard/analytics", label: "Lucid", icon: BarChart2 },
+  { href: "/dashboard/settings", label: "OBE", icon: Settings },
 ]
 
 export default function DashboardNavbar() {
   const pathname = usePathname()
 
   return (
-    <nav className="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200 shadow-sm">
+    <nav className="flex items-center justify-between px-6 py-3 bg-black border-b border-gray-200 shadow-sm">
       {/* Left: Logo */}
       <div className={"flex items-center space-x-2"}>
-        <span className={`${sansationLogo.className} text-xl font-bold text-gray-900`}>KNOW REAL</span>
+        <span className={`${sansationLogo.className} text-xl font-bold text-white`}>KNOW REAL</span>
       </div>
 
       {/* Middle: Nav links */}
@@ -33,7 +34,7 @@ export default function DashboardNavbar() {
               key={href}
               href={href}
               className={`flex items-center space-x-1 text-sm font-medium transition-colors ${
-                isActive ? "text-blue-600" : "text-gray-600 hover:text-gray-900"
+                isActive ? "text-blue-400" : "text-gray-300 hover:text-gray-400"
               }`}
             >
               <Icon className="w-4 h-4" />
@@ -46,7 +47,7 @@ export default function DashboardNavbar() {
       {/* Right: Sign out */}
       <button
         onClick={() => signOut({ callbackUrl: "/" })}
-        className="flex items-center space-x-2 text-sm font-medium text-gray-600 hover:text-red-600 transition-colors"
+        className="flex items-center space-x-2 text-sm font-medium text-gray-300 hover:text-red-600 transition-colors cursor-pointer"
       >
         <LogOut className="w-4 h-4" />
         <span>Sign out</span>
