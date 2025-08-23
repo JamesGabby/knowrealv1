@@ -8,9 +8,9 @@ import { sansationLogo } from "@/fonts/Sansation"
 
 const navItems = [
   { href: "/dashboard", label: "Home", icon: Home },
-  { href: "/dashboard/analytics", label: "Meditation", icon: BarChart2 },
-  { href: "/dashboard/analytics", label: "Lucid", icon: BarChart2 },
-  { href: "/dashboard/settings", label: "OBE", icon: Settings },
+  { href: "/dashboard/meditation", label: "Meditation", icon: BarChart2 },
+  { href: "/dashboard/lucid", label: "Lucid", icon: BarChart2 },
+  { href: "/dashboard/obe", label: "OBE", icon: Settings },
 ]
 
 export default function DashboardNavbar() {
