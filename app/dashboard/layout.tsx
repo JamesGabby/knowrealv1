@@ -1,5 +1,5 @@
 // app/dashboard/layout.tsx
-import DashboardNavbar from "@/components/DashboardNavbar/DashboardNavbar"
+import DashboardNavbar from "@/app/dashboard/DashboardNavbar"
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (

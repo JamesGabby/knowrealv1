@@ -6,8 +6,6 @@ import { signOut } from "next-auth/react"
 import { Home, BarChart2, Settings, LogOut } from "lucide-react"
 import { sansationLogo } from "@/fonts/Sansation"
 
-
-
 const navItems = [
   { href: "/dashboard", label: "Home", icon: Home },
   { href: "/dashboard/analytics", label: "Meditation", icon: BarChart2 },
